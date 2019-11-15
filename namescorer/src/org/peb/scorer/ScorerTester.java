@@ -8,14 +8,14 @@ class ScorerTester {
 
 	@Test
 	void testSimpleList() {
-		Scorer scorer = new ScorerImpl();
+		Scorer scorer = ScorerFactory.create();
 		String[] names = {"MARY","PATRICIA","LINDA","BARBARA","VINCENZO","SHON","LYNWOOD","JERE","HAI"};
 		assertEquals(3194, scorer.score(names));
 	}
 	
 	@Test
 	void testBigList() {
-		Scorer scorer = new ScorerImpl();
+		Scorer scorer = ScorerFactory.create();
 		String[] names = ScoreUtility.getNames("C:\\Users\\pblac\\Documents\\names.txt");
 		assertEquals(871198282, scorer.score(names));
 	}

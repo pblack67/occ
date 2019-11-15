@@ -26,7 +26,7 @@ public class ScoreUtility {
 	
 	public static void main(String[] args) {
 		if (args.length == 1) {
-			Scorer scorer = new ScorerImpl();
+			Scorer scorer = ScorerFactory.create();
 			System.out.println(scorer.score(getNames(args[0])));
 		} else {
 			System.out.println("Usage: java ScoreUtility filename");
