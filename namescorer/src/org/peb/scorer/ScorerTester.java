@@ -2,12 +2,6 @@ package org.peb.scorer;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-
 import org.junit.jupiter.api.Test;
 
 class ScorerTester {
@@ -22,17 +16,6 @@ class ScorerTester {
 	@Test
 	void testBigList() {
 		Scorer scorer = new ScorerImpl();
-		File file = new File("C:\\Users\\pblac\\Documents\\names.txt");
-		try {
-			BufferedReader br = new BufferedReader(new FileReader(file));
-			String blobOfNames = br.readLine();
-			String[] names = blobOfNames.split(",");
-			assertEquals(871198282, scorer.score(names));
-			br.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		assertEquals(871198282, scorer.score(ScoreUtility.getNames("C:\\Users\\pblac\\Documents\\names.txt")));
 	}
 }

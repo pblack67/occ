@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class ScorerImpl implements Scorer {
 	private static Character[] chars = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
 	                               
-	private int scoreName(String name) {
+	public int scoreName(String name) {
 		int result = 0;
 		for (int i = 0; i < name.length(); i++) {
 			char ch = name.charAt(i);
