@@ -16,7 +16,7 @@ class ScorerTester {
 	@Test
 	void testBigList() {
 		Scorer scorer = ScorerFactory.create();
-		String[] names = ScoreUtility.getNames("C:\\Users\\pblac\\Documents\\names.txt");
+		String[] names = NameReader.getNames("C:\\Users\\pblac\\Documents\\names.txt");
 		assertEquals(871198282, scorer.score(names));
 	}
 }
