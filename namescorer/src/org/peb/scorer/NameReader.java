@@ -7,7 +7,13 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class NameReader {
-
+	/**
+	 * Simple file reader that reads in a file.
+	 * The file's format is a comma-separated list of names in one line.
+	 * 
+	 * @param fileName the name of the file
+	 * @return array of names 
+	 */
 	public static String[] getNames(String fileName) {
 		String[] names = new String[0];
 		File file = new File(fileName);
